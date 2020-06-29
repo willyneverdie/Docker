@@ -1,0 +1,15 @@
+//run mongo container
+docker run --name some-mongo  mongo
+
+docker container run /
+-d /
+-p 27017:27017 /
+--name mongo /
+docker container run /
+-d /
+-p hostPort:containerPort /
+--name $container_name /
+$image_name
+
+mongo:xenial
+

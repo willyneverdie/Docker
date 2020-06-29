@@ -1,0 +1,21 @@
+//list images
+docker image ls
+
+//list containers
+docker ps -a
+
+//run container (create container)
+docker container run /
+-d /
+-p hostPort:containerPort /
+--name $container_name /
+$image_name
+
+//delete container
+docker container rm $container_id
+
+//delete image
+docker image rm $image_id
+
+//pull image
+docker image pull $name:$tag

@@ -1,0 +1,10 @@
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+
+docker run --name local/postgres -e POSTGRES_PASSWORD=postgres -d postgres
+
+//here we expose the port
+docker run --name postgres2 -d -p 5432:5432 -e POSTGRES_PASSWORD=postgres postgres
+
+docker exec -it postgres bash
+
+psql -U postgres

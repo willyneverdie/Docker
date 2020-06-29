@@ -1,0 +1,11 @@
+//run mongo container
+docker run --name some-mongo  mongo
+
+docker container run \
+-d \
+-p 27017:27017 \
+--name mongo01 \
+-e MONGO_INITDB_ROOT_USERNAME=mongoadmin \
+-e MONGO_INITDB_ROOT_PASSWORD=secret \
+mongo:xenial
+

@@ -1,0 +1,6 @@
+systemctl stop docker.service
+systemctl start docker.service
+
+docker image build --tag local/node:1 .
+docker container run -d -p 3000:3000 --name react-server1 local/node:1
+
